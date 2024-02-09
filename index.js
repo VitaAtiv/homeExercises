@@ -134,39 +134,28 @@ const data = [
   },
 ];
 
-
+const listEl = document.querySelector(".list");
 const list = data.map((e) => {
-    const liEl = document.createElement("li");
-    const imgEl = document.createElement("img");
-    const divEl = document.createElement("div");
-    const h3El = document.createElement("h3");
-    const pEl = document.createElement("p");
-    liEl.classList.add("list-item");
-    liEl.append(imgEl)
-    imgEl.classList.add("list-item-img");
-    imgEl.src = e.img;
-    imgEl.alt = e.name;
-    divEl.classList.add("list-item-wrap-text");
-   
-    h3El.classList.add("list-item-title");
-    h3El.textContent = e.name
-    pEl.textContent = e.phone;
-    pEl.classList.add("list-item-text");
-    divEl.append(h3El);
-    divEl.append(pEl);
-    console.log(liEl);
+  const liEl = document.createElement("li");
+  const imgEl = document.createElement("img");
+  const divEl = document.createElement("div");
+  const h3El = document.createElement("h3");
+  const pEl = document.createElement("p");
+  liEl.classList.add("list-item");
+  imgEl.classList.add("list-item-img");
+  imgEl.src = e.img;
+  imgEl.alt = e.name;
+  divEl.classList.add("list-item-wrap-text");
+  h3El.classList.add("list-item-title");
+  h3El.textContent = e.name;
+  pEl.classList.add("list-item-text");
+  pEl.textContent = e.phone;
+  divEl.append(h3El, pEl);
+  liEl.append(imgEl, divEl);
+  return liEl;
 
-//   console.log(e);
-//   let item = document.createElement("li");
-//   item.className = "list-item";
-//   item.innerHTML = `
-//                 <img src="${obj.img}" alt="${obj.name}">
-//                 <p>Name: ${obj.name}</p>
-//                 <p>Phone: ${obj.phone}</p>
-//               `;
-//   listEl.prepend(item);
 });
-
+  console.log(list);
 /*
 const listEl = document.querySelector("ul");
 data.forEach(function (obj) {
@@ -180,7 +169,6 @@ data.forEach(function (obj) {
   listEl.prepend(everyEl);
 });
 */
-
 
 /*
 const list = data.map((e) => {
