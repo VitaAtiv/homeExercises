@@ -1,9 +1,16 @@
-import { data } from "./db.js"
-import { createCards } from "./createCards.js";
+import { data } from "./db.js";
+import { createCards } from "./helpers/createCards.js";
 import { refs } from "./refs.js";
 
 const list = createCards(data);
-refs.listEl.append(...list)
+refs.listEl.innerHTML = list.join("");
+
+const listEl = refs.listEl.querySelectorAll(".list-item")
+console.log(listEl);
+listEl.forEach((e) => 
+  e.addEventListener("click", ()=>e.classList.add("active"))
+)
+
 /*
 const listEl = document.querySelector("ul");
 data.forEach(function (obj) {

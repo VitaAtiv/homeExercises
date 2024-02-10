@@ -38,6 +38,11 @@ img {
     border-top-right-radius: 10px;
 }
 
+.list-item.active {
+    background-color: #8cb19a;
+    border: 2px solid #8cb19a;
+}
+
 .list-item-wrap-text {
     padding: 16px;
 }
