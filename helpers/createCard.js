@@ -28,7 +28,7 @@ export function createCard({ img, name, phone }) {
               <p class="list-item-text">${phone}</p>
             </div>
           </li>`
-  );
+  ) } ;
 
 //   const liEl = document.createElement("li");
 //   const imgEl = document.createElement("img");
