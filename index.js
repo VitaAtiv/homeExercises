@@ -5,11 +5,27 @@ import { refs } from "./refs.js";
 const list = createCards(data);
 refs.listEl.innerHTML = list.join("");
 
-const listEl = refs.listEl.querySelectorAll(".list-item")
+const listEl = refs.listEl.querySelectorAll(".list-item");
 console.log(listEl);
-listEl.forEach((e) => 
-  e.addEventListener("click", ()=>e.classList.add("active"))
-)
+refs.listEl.addEventListener("clikc", (e) => {
+  const card = e.target.closest(".list-item");
+  if (!card) {
+    return;
+  }
+  card.classList.toggle("active");
+  alert("!");
+});
+// listEl.forEach((e) =>
+//   e.addEventListener("click", ()=>e.classList.add("active"))
+// )
+
+// refs.text.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   console.log(e);
+//   alert("text");
+// });
+// refs.boxChild.addEventListener("click", () => alert("box-cild"));
+// refs.box.addEventListener("click", () => alert("box"));
 
 /*
 const listEl = document.querySelector("ul");
