@@ -3,7 +3,7 @@ import { createCards } from "./helpers/createCards.js";
 import { refs } from "./refs.js";
 
 const list = createCards(data);
-refs.listEl.innerHTML = list.join("");
+refs.listEl.insertAdjacentHTML ("beforeend", list.join(""));
 
 const listEl = refs.listEl.querySelectorAll(".list-item");
 console.log(listEl);

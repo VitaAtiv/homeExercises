@@ -1,3 +1,5 @@
+import { refs } from "../refs.js";
+
 // export function createCard ({img, name, phone}) {
 //      return `<li class="list-item">
 //             <img
@@ -12,12 +14,10 @@
 //           </li>`;
 // }
 
-import { refs } from "./refs.js";
+
 
 export function createCard({ img, name, phone }) {
-  refs.listEl.insertAdjacentHTML(
-    "afterbegin",
-    `<li class="list-item">
+  return `<li class="list-item">
             <img
               class="list-item-img"
               src="${img}"

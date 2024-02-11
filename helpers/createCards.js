@@ -1,5 +1,5 @@
-import { createCard } from "./helpers/createCard.js";
+import { createCard } from "./createCard.js";
 
 export function createCards(data) {
-  return data.map(createCard);
+ return data.map(createCard);
 }
