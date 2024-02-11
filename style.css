@@ -29,7 +29,7 @@ img {
 
 .list-item {
     width: calc((100% - 2*24px) / 3);
-    border: 1px solid rgb(0, 0, 0);
+    border: 3px solid rgb(168, 167, 167);
     border-radius: 10px;
 }
 
@@ -40,7 +40,7 @@ img {
 
 .list-item.active {
     background-color: #8cb19a;
-    border: 2px solid #8cb19a;
+    border: 3px solid #8cb19a;
 }
 
 .list-item-wrap-text {

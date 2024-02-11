@@ -28,7 +28,7 @@ export function createCard({ img, name, phone }) {
               <p class="list-item-text">${phone}</p>
             </div>
           </li>`
-  ) } ;
+   } ;
 
 
 

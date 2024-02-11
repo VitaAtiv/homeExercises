@@ -7,13 +7,13 @@ refs.listEl.insertAdjacentHTML ("beforeend", list.join(""));
 
 const listEl = refs.listEl.querySelectorAll(".list-item");
 console.log(listEl);
-refs.listEl.addEventListener("clikc", (e) => {
+refs.listEl.addEventListener("click", (e) => {
   const card = e.target.closest(".list-item");
   if (!card) {
     return;
   }
   card.classList.toggle("active");
-  alert("!");
+  // alert("!");
 });
 // listEl.forEach((e) =>
 //   e.addEventListener("click", ()=>e.classList.add("active"))
