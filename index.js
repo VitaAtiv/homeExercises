@@ -1,20 +1,20 @@
-import { data } from "./db.js";
-import { createCards } from "./helpers/createCards.js";
-import { refs } from "./refs.js";
+// import { data } from "./db.js";
+// import { createCards } from "./helpers/createCards.js";
+// import { refs } from "./refs.js";
 
-const list = createCards(data);
-refs.listEl.insertAdjacentHTML ("beforeend", list.join(""));
+// const list = createCards(data);
+// refs.listEl.insertAdjacentHTML ("beforeend", list.join(""));
 
-const listEl = refs.listEl.querySelectorAll(".list-item");
-console.log(listEl);
-refs.listEl.addEventListener("click", (e) => {
-  const card = e.target.closest(".list-item");
-  if (!card) {
-    return;
-  }
-  card.classList.toggle("active");
-  // alert("!");
-});
+// const listEl = refs.listEl.querySelectorAll(".list-item");
+// console.log(listEl);
+// refs.listEl.addEventListener("click", (e) => {
+//   const card = e.target.closest(".list-item");
+//   if (!card) {
+//     return;
+//   }
+//   card.classList.toggle("active");
+//   // alert("!");
+// });
 // listEl.forEach((e) =>
 //   e.addEventListener("click", ()=>e.classList.add("active"))
 // )
